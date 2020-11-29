@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Django</title>
+    
+    
+</head>
+<body>
+        {% include "superior/barra.html" %}
+    <h1 style="color:blue"> Hola Estuadiantes de Django</h1>
+    <p>El nombre de los alumnos:{{nombre_persona}} {{apellido_persona}}</p>
+
+    {#Para comentarios de uan linea#}
+    {% comment %} Esta es la 
+    forma de hacer comentarios de mas de una linea
+    {% endcomment %}
+    
+    {% if nombre_persona == 'Grediana'%}
+    <p>Es una alumna de la clase</p>
+    {%else%}
+    <p>No es una alumana de la clase</p>
+    {% endif%}
+
+    <p>Uno de los nombres de los alumnos es: {{nombre_persona.upper}} {{apellido_persona.upper}}</p>
+    <p>Estas viendo la fecha actual de esta informaci&oacute;n: {{momento_actual.day}} / {{momento_actual.month}} / {{momento_actual.year}}</p>
+    <p><strong>Estos son los temas:</strong> </p>
+    <p> 
+        <ul>
+        {% if temas %}
+            {% for el_tema in temas %}
+                <li>{{el_tema}}</li>
+
+            {% endfor %}
+        {% else %}
+            <p>No hay datos que mostrar</p>
+        {% endif %}    
+        </ul>
+
+    </p>
+</body>
+</html>

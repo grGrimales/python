@@ -1,0 +1,18 @@
+{% extends "RecetasApp/base.html" %}
+{% load static %}
+{% block content %}
+<link href="{% static 'RecetasApp/css/styles.css' %}" rel="stylesheet">
+
+{% for receta in receta %}
+<div class="caja">
+  <p>
+  <h2>{{receta.receta}}</h2>
+  <p>{{receta.ingredientes}}</p>
+  <p>{{receta.preparacion}}</p>
+  <img src="{{}}">
+  </p>
+
+</div>
+
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Recetas dulces con Luz del Día</title>
+    <link href="{% static 'RecetasApp/css/styles.css' %}" rel="stylesheet">
+
+    <link href="{% static 'RecetasApp/img/logo.png' %}" rel="icon" />
+
+</head>
+
+<body>
+    <div id="general">
+        <header id="caja-cabecera">
+            <!-- <img id="logo" src="{% static 'RecetasApp/img/logo.png' %}" alt="Logotipo de la web" />-->
+           <!-- <img id="logo1" src="{% static 'RecetasApp/img/logo1.png' %}" alt="Logotipo de la web" />-->
+            <h1>Recetas dulces con Luz del Día</h1>
+            <img class="img-principal" src="{% static 'RecetasApp/img/fondo2.png' %}">
+    
+        </header>
+    
+    <div class="clearfix"></div>
+    <nav id="menu">
+        <ul>
+            <li>
+                <a href="{% url 'Inicio' %}">Inicio</a>
+            </li>
+            <li><a href="{% url 'Recetario' %}">Receatrio</a></li>
+            <li><a href="{% url 'Contacto' %}">Contacto</a></li>
+        </ul>
+
+    </nav>
+    
+    <div class="clearfix"></div>
+    
+   <!-- Contenido cambiante -->
+   {% block content %}
+
+   {% endblock %}
+   <div class="clearfix"></div>
+   <footer id="footer">
+
+    Todos los derechos reservados &copy; Recetas Dulces con Luz del Día
+</footer>
+
+</div>
+</body>
+
+</html>

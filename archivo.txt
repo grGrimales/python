@@ -1,0 +1,3 @@
+ Estupendo dia para aprender python 
+Esta linea de texto ha sido incluida desde el exterior 
+  Con esfuerzo y dedicacion podemos seguir aumentando nuestros conocomientos
